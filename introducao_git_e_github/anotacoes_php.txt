@@ -1,0 +1,131 @@
+Tipos de dados no PHP
+PHP suporta diferentes tipos de dados, esses tipos são divididos em duas categorias, escalares e compostos.
+
+Escalares:
+
+int
+float
+string
+boolean
+Compostos:
+
+array
+object
+Além dos tipos citados acima, existem dois tipos de dados especiais, resource e NULL.
+
+Valores numéricos
+
+PHP reconhece dois tipos de dados numéricos, inteiros(int) e valores de ponto flutuante(float ou também conhecido como double).
+
+Tipo Int ( inteiro / integer )
+
+Um número inteiro é constituído de números naturais {0, 1, 2, 3, …} e de seus simétricos {-1, -2, -3, …}, ou seja, signed, podendo conter valores positivos ou negativos.
+
+Esses números podem seguir diferentes tipos de sistemas, confira na lista abaixo.
+
+Sistema Decimal – Ex: 20
+Sistema Octal – Ex: 0777
+Sistema Hexadecimal – Ex: 0x123
+Caso você esteja estudando para tirar sua certificação, de uma olhada nas fórmulas utilizadas para conversão dos valores, principalmente octal para decimal e hexadecimal para decimal, pode ser que você precise analisar algum cálculo que envolva esses sistemas, melhor estar preparado.
+Tipo Float ( ponto flutuante / double )
+
+Ponto flutuante (float ou double) é um formato de representação digital de números reais.
+
+Os valores float podem seguir dois tipos de notação, confira:
+
+Decimal – Ex: 0.25
+Exponencial – Ex: 1e2
+Tipo String
+
+Strings são coleções ordenadas de dados binário, mas para a maioria dos casos pode ser explicado como um conjunto de caracteres.
+
+Podemos declarar uma string utilizando aspas simples ou aspas duplas, a grande diferença entre as opções é que quando declarada com aspas duplas o conteúdo da string será interpretado, ou seja, se tiver variáveis ou caracteres de escape em seu conteúdo, os mesmos serão substituídos pelos seus valores.
+
+String utilizando aspas duplas
+
+1
+2
+3
+4
+5
+<?php
+$who = 'World';
+echo "Hello $who";
+// Resultado: Hello World
+?>
+Lista de caracteres de escape
+
+\n – fim de linha
+\r – retorno de carro(carriage return)
+\t – tab horizontal
+\v – tab vertical
+\f – form feed
+\\ – contra barra ou barra invertida
+\$ – sinal de cifrão
+\” – aspas duplas
+String utilizando aspas simples
+
+1
+2
+3
+4
+5
+<?php
+$who = 'World';
+echo 'Hello $who';
+// Resultado: Hello $who
+?>
+O único caractere de escape que uma string utilizando aspas simples permite é para imprimir exatamente uma aspas simples.
+
+1
+2
+3
+4
+<?php
+echo 'Joe\'s pizza';
+// Resultado: Joe's pizza
+?>
+Utilize aspas simples sempre que possível pois seu processamento é mais rápido. Use aspas duplas somente quando for necessário interpretar valores em seu conteúdo.
+Tipo boolean
+
+O tipo boolean só aceita dois valores, true e false, ou seja, verdadeiro e falso, geralmente é utilizado como base para operações lógicas.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+<?php
+$boolean = true;
+if($boolean) {
+    echo 'verdadeiro / true';
+} else {
+    echo 'falso / false';
+}
+// Resultado: verdadeiro / true
+ 
+// Exemplo de valores verdadeiros
+$var = true;
+$var = 'texto';
+$var = 1;
+// Exemplo de valores falsos
+$var = false;
+$var = '';
+$var = null;
+$var = 0;
+?>
+No exemplo acima definimos uma variável, $boolean, com o valor true(verdadeiro), verificamos se(if) a variável $boolean é verdadeira, caso seja imprimimos uma string com valor: verdadeiro / true, caso contrário(else) imprimimos uma string com valor: falso / false, como definimos a variável como true, o resultado será a primeira opção.
